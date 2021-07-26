@@ -5,7 +5,7 @@ import 'package:supabase/supabase.dart';
 class AuthService {
   final _authClient = Get.find<SupabaseClient>();
   //register user and create a custom user data in the database
-  signUpUser(String name, String email, String password) async {
+ Future<GotrueSessionResponse> signUpUser(String name, String email, String password) async {
     final user = await _authClient.auth.signUp(email, password);
     final response = await _authClient.from('Users').insert([
       {"Id": user.user.id, "Name": name, "Email": email}
@@ -17,12 +17,12 @@ class AuthService {
   }
 
 //log in user
-  signIn(String email, String password) async {
+ Future<GotrueSessionResponse> signIn(String email, String password) async {
     final user =
         await _authClient.auth.signIn(email: email, password: password);
-    if (user.error == null) {
+    
       return user;
-    }
+    
   }
 
 //get currently logged in user data

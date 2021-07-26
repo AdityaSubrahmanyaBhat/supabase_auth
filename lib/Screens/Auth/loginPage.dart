@@ -1,3 +1,4 @@
+import 'package:supabase/supabase.dart';
 import 'package:supabase_auth/Screens/Auth/registerPage.dart';
 import 'package:supabase_auth/Screens/Home/home.dart';
 import 'package:flutter/material.dart';
@@ -112,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         logging == false
                             ? ElevatedButton(
-                                onPressed: () async {
+                                onPressed: ()  {
                                   if (_formKey.currentState.validate()) {
                                     setState(() {
                                       logging = true;
@@ -185,7 +186,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Future login() async {
     final box = Get.find<GetStorage>();
-    final result =
+    GotrueSessionResponse result =
         await _service.signIn(_emailController.text, _passwordController.text);
 
     if (result.data != null) {
@@ -202,7 +203,7 @@ class _LoginPageState extends State<LoginPage> {
           builder: (context) => HomePage(),
         ),
       );
-    } else if (result.error?.message != null) {
+    } else if (result.error.message != null) {
       setState(() {
         logging = false;
       });

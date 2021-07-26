@@ -8,7 +8,7 @@ import 'package:supabase_auth/Services/authService.dart';
 
 final String _supaBaseUrl = 'YOUR PROJECT URL';
 final String _supaBaseKey = 'YOUR PROJECT API KEY';
-
+//TODO: Replace with your own values
 void main() {
   Get.put<SupabaseClient>(SupabaseClient(_supaBaseUrl, _supaBaseKey));
   Get.put<GetStorage>(GetStorage());

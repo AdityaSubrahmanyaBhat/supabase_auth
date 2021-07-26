@@ -1,3 +1,4 @@
+import 'package:supabase/supabase.dart';
 import 'package:supabase_auth/Screens/Auth/loginPage.dart';
 import 'package:supabase_auth/Services/authService.dart';
 import 'package:flutter/material.dart';
@@ -128,7 +129,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         registering == false
                             ? ElevatedButton(
-                                onPressed: () async {
+                                onPressed: ()  {
                                   if (_formKey.currentState.validate()) {
                                     setState(() {
                                       registering = true;
@@ -200,7 +201,7 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future register() async {
-    final result = await _service.signUpUser(
+    GotrueSessionResponse result = await _service.signUpUser(
         _nameController.text, _emailController.text, _passwordController.text);
     if (result.data != null) {
       setState(() {
