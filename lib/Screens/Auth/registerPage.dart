@@ -129,7 +129,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         ),
                         registering == false
                             ? ElevatedButton(
-                                onPressed: ()  {
+                                onPressed: () async {
                                   if (_formKey.currentState.validate()) {
                                     setState(() {
                                       registering = true;

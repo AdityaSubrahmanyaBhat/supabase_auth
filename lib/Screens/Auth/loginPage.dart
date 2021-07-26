@@ -113,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         logging == false
                             ? ElevatedButton(
-                                onPressed: ()  {
+                                onPressed: () async {
                                   if (_formKey.currentState.validate()) {
                                     setState(() {
                                       logging = true;
