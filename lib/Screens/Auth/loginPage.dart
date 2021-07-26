@@ -1,9 +1,9 @@
+import 'package:supabase_auth/Screens/Auth/registerPage.dart';
+import 'package:supabase_auth/Screens/Home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:supabase_auth/Screens/Auth/registerPage.dart';
-import 'package:supabase_auth/Screens/Home/home.dart';
 import 'package:supabase_auth/Services/authService.dart';
 
 class LoginPage extends StatefulWidget {
@@ -196,9 +196,6 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         logging = false;
       });
-      print("Printing result data");
-      print(result.data);
-
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

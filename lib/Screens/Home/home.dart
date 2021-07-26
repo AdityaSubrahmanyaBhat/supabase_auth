@@ -1,14 +1,14 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:supabase_auth/Screens/Auth/loginPage.dart';
 import 'package:supabase_auth/Services/authService.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   @override
   _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomePage> with TickerProviderStateMixin {
+class _HomeViewState extends State<HomePage> {
   AuthService _authservice = AuthService();
   bool loading = false;
 

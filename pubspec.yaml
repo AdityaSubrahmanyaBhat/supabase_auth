@@ -29,9 +29,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   form_field_validator: ^1.1.0
-  get: ^4.2.4
+  get: ^4.3.0
   get_storage: ^2.0.3
-  supabase: ^0.0.3
+  supabase: ^0.0.4
 
 dev_dependencies:
   flutter_test:

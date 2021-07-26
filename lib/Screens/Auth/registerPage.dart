@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 import 'package:supabase_auth/Screens/Auth/loginPage.dart';
 import 'package:supabase_auth/Services/authService.dart';
+import 'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 class RegisterPage extends StatefulWidget {
   @override
@@ -173,7 +173,7 @@ class _RegisterPageState extends State<RegisterPage> {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (_) => LoginPage(email: _emailController.text,),
+                                    builder: (_) => LoginPage(),
                                   ),
                                 );
                               },
