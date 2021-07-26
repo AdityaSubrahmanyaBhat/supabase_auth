@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  _HomeViewState createState() => _HomeViewState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeViewState extends State<HomePage> {
+class _HomePageState extends State<HomePage> {
   AuthService _authservice = AuthService();
   bool loading = false;
 
