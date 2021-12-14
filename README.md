@@ -1,5 +1,7 @@
 # supabase_auth
 
+![Go to the blog](https://dev.to/adityasubrahmanyabhat/implementing-auth-in-flutter-using-supabase-and-getx-1m14)
+
 A new Flutter project.
 
 ## Getting Started
